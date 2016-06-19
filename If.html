@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Estrutura Condicional If</title>
+    <script type="text/javascript">
+      function testIf() {
+        var x = 10;
+        var y = 10;
+        var result;
+        if (x==y) {
+          result = "x é igual a y.";
+        } else {
+          result = "x não é igual a y."
+        }
+        document.getElementById('demo').innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <h3 id="demo">Resultado</h3>
+    <input type="button" name="botao" value="Click" onclick="testIf()">
+  </body>
+</html>

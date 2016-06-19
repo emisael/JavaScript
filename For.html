@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Laço for</title>
+    <script type="text/javascript">
+      function testFor() {
+        var varout = "";
+        for (var i = 0; i < 5; i++) {
+          varout = varout + "O Número é " + i + "<br>";
+        }
+        document.getElementById("out").innerHTML = varout;
+      }
+      function testFor2() {
+        var result = 0;
+        for (var i = 0; i < 100; i = i+2) {
+          result = result + i;
+        }
+        document.getElementById("out2").innerHTML += result + "<br>";
+      }
+    </script>
+
+  </head>
+  <body>
+    <p>
+      <input type="button" name="name" value="click" onclick="testFor()">
+    </p>
+    <p>
+      <span id="out" name="out"></span>
+    </p>
+    <br>
+    <p>
+      <input type="button" name="name" value="click 2" onclick="testFor2()">
+    </p>
+    <p>
+      <span id="out2" name="out2"></span>
+    </p>
+  </body>
+</html>

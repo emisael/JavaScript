@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Do While Teste</title>
+    <script type="text/javascript">
+      function testDoWhile(frase,qtd) {
+        var frase = document.getElementById(frase).value;
+        var qtd = document.getElementById(qtd).value;
+        var i = 1;
+
+        do{
+          document.getElementById('view').innerHTML += i  +": " + frase + "<br>";
+          i++;
+        } while (i<=qtd);
+      }  
+    </script>
+
+    <style type="text/css">
+      #frase {width: 350px;}
+      #qtd {width: 35px;}
+    </style>
+  </head>
+  <body>
+      Escrever
+      <input type="text" name="frase" value="Emisael e Nelma se Amam!!!" id="frase"> até
+      <input type="number" name="qtd" value="1" min="1" max="1000" step="15" id="qtd"><br>
+      <input type="button" name="btMostar" value="Mostrar" onclick="testDoWhile('frase','qtd')">
+      <p id="view">
+
+      </p>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Loop for</title>
+    <script type="text/javascript">
+      function testFor(i,f) {
+        var ini = document.getElementById(i).value;
+        var fim = document.getElementById(f).value;
+
+        var instru = document.getElementById('demo').value;
+
+        for(var i = ini; i <= fim; i++){
+          // document.write(i + ": " + instru + "<br>");
+          document.getElementById('parag').innerHTML += i + ": " + instru + "<br>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Início: <input type="number" name="inicio" value="0" min="1" max="10" step="1" id="ini"><br>
+    Final: <input type="number" name="final" value="0" min="11" max="1010" step="1" id="fim"><br>
+    Instrução: <input type="text" name="demo" value="" id="demo"><br>
+    <input type="button" name="botao" value="Click" onclick="testFor('ini','fim')">
+    <p id="parag">
+
+    </p>
+  </body>
+</html>

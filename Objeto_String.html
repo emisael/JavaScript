@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Objeto String</title>
+    <script type="text/javascript">
+      function testString() {
+        var nome = "Emisael_Cavalcante_da_Silva";
+        var x = nome[5];
+        document.getElementById('view1').innerHTML = nome.length;
+        document.getElementById('view2').innerHTML = nome.indexOf('a');
+        document.getElementById('view3').innerHTML = nome.lastIndexOf('a');
+        document.getElementById('view4').innerHTML = nome.search('a');
+        document.getElementById('view5').innerHTML = nome.slice(5,12);
+        document.getElementById('view5b').innerHTML = nome.slice(5);
+        document.getElementById('view5c').innerHTML = nome.slice(-5);
+        document.getElementById('view6').innerHTML = nome.substr(3,2);
+        document.getElementById('view7').innerHTML = nome.substring(0,7);
+        document.getElementById('view8').innerHTML = nome.replace('_','#');
+        document.getElementById('view8b').innerHTML = nome.replace(/_/g,'#');
+        document.getElementById('view9').innerHTML = nome.toUpperCase();
+        document.getElementById('view10').innerHTML = nome.toLowerCase();
+        document.getElementById('view11').innerHTML = nome.concat(' programador',' JavaScript', ' e ', 'Delphi');
+        document.getElementById('view12').innerHTML = nome.charAt(5);
+        document.getElementById('view13').innerHTML = nome.charCodeAt(5);
+        document.getElementById('view14').innerHTML = nome.split('_');
+        document.getElementById('view14b').innerHTML = nome.split();
+        document.getElementById('view14c').innerHTML = nome.split('');
+        var arr = nome.split('_');
+        var text = '';
+        var i;
+        for (i = 0; i < arr.length; i++){
+          document.getElementById('view14e').innerHTML +='arr['+ i +']: ' + arr[i] + '<br>';
+        }
+      }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+  </head>
+  <body>
+    <input type="button" name="btMostrar" value="Mostrar" onclick="testString()">
+    <p>
+      Nome: Emisael_Cavalcante_da_Silva
+    </p>
+
+    <p>
+      lenght: retorna a quantidade de caracteres de uma string;<br>
+      Ex: nome.lenght = <span id="view1" class="view"></span>
+    </p>
+    <p>
+      indexOf(): retorna o índice (posição) da primeira ocorrência de um caractere ou sequência de<br>
+      caractere dentro de uma string;<br>
+      Ex: nome.indexOf('a') = <span id="view2" class="view"></span><br>
+      *Nao obtendo resultado o método retornará -1;
+    </p>
+    <p>
+      lastIndexOf(): retorna o índice (posição) da útima ocorrência de um caractere ou sequência de<br>
+      caractere dentro de uma string;<br>
+      Ex: nome.indexOf('a') = <span id="view3" class="view"></span><br>
+      *Nao obtendo resultado o método retornará -1;
+    </p>
+    <p>
+      search(): é igual ao método indexOf(), retorna o índice (posição) da primeira ocorrência de um caractere ou sequência de<br>
+      caractere dentro de uma string;<br>
+      Ex: nome.indexOf('e') = <span id="view4" class="view"></span><br>
+      *Nao obtendo resultado o método retornará -1;
+    </p>
+    <p>
+      slice(): retorna parte de uma string. A parte de string que se deseja obter é indicada pelos <br>
+      dois parâmetros de slice(posicao_inicial,posicao_final);<br>
+      Ex: nome.slice(5,13) = <span id="view5" class="view"></span><br>
+      Se for omitido o segundo parâmetro, a string será mostrada a partir da posição indicada pelo primeiro parâmetro.<br>
+      Ex: nome.slice(5) = <span id="view5b" class="view"></span><br>
+      Se for colocado apenas um parâmetro e ele for negativo, será exibido a quantidade de caracteres indicada pelo parâmetro <br>
+      contando do final para o início.
+      Ex: nome.slice(-5) = <span id="view5c" class="view"></span><br>
+
+    </p>
+    <p>
+      substr(): retorna parte de uma string. Com a parte que se deseja obter indecada pelos dois parâmetros de substr(posicao_inicial,qtd_caractere).<br>
+      O substr() não aceita indices negativos.<br>
+      Ex: nome.substr(3,2) = <span id="view6" class="view"></span><br>
+
+    </p>
+    <p>
+      substring(): Semelhante ao método slice() com a diferença de não aceitar índice negativo<br>
+      Ex: nome.substring(0,7) = <span id="view7" class="view"></span><br>
+
+    </p>
+    <p>
+      replace(): substitue um valor específico por outro valor em um string <br>
+      Ex: nome.replace('_','#') = <span id="view8" class="view"></span><br>
+      Por padrão, replace() substritue apenas a primeira ocorrência, para substituir todas as ocorrencias dentro da string, use /termo_procurado/g.<br>
+      Ex: nome.replace(/-/g,'#') = <span id="view8b" class="view"></span><br>
+    </p>
+    <p>
+      toUpperCase(): converte uma string para maiúscula.<br>
+      Ex: nome.toUpperCase() = <span id="view9" class="view"></span><br>
+    </p>
+    <p>
+      toLowerCase(): converte uma string para minúscula.<br>
+      Ex: nome.toLowerCase() = <span id="view10" class="view"></span><br>
+    </p>
+    <p>
+      concat(): junta duas ou mais cadeias de caracteres.<br>
+      Ex: nome.concat(' programador',' JavaScript', ' e ', 'Delphi') = <span id="view11" class="view"></span><br>
+      *concat() pode ser usado em vez do sinal de (+).
+    </p>
+    <p>
+      charAt(): retorna um caractere localizado em um índice específico de uma string.<br>
+      Ex: nome.charAt(5) = <span id="view12" class="view"></span><br>
+
+    </p>
+    <p>
+      charCodeAt(): retorna o Unicode de um caractere específico de uma string.<br>
+      Ex: nome.charCodeAt(5) = <span id="view13" class="view"></span><br>
+
+    </p>
+    <p>
+      split(): converte uma string para um array. Na string a ser convertida para um array, deve haver um caractere que <br>
+      funcionará com separador. Tal caractere deve se repedir várias vezes, pois ele é quem determinará as várias partes de array.<br>
+      Ex: nome.split('_') = <span id="view14" class="view"></span><br>
+      Após convertido em um array, pode-se acessar todos os elementos do mesmo normalmente. <br>
+      Ex <br>
+      var arr = nome.split('_');<br>
+      var i;<br>
+      for (i = 0; i < arr.length; i++){<br>
+        document.getElementById('view14e').innerHTML += arr[i];<br>
+      }<br>
+      *Resultado
+      <br> <span id="view14e" class="view"></span><br>
+
+      *Se o separador for omitido, split() retornará um array com um único elemento contendo toda a string, este elemento estará na posição [0] do array.<br>
+      Ex: nome.split() = <span id="view14b" class="view"></span><br>
+      *Se o separador for indicado com vazio (''), o array retornado será um array de caracteres individuais.<br>
+      Ex: nome.split('') = <span id="view14c" class="view"></span><br>
+    </p>
+  </body>
+</html>

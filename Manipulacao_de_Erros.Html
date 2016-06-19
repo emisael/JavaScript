@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Manipulação de Erros</title>
+    <script type="text/javascript">
+      function showMessage() {
+        try {
+          alert("Alô mundo");
+        } catch (e) {
+          txt = "Ocorreu um erro nesta página.\n";
+          txt += "Descrição do erro: " + e.message;
+          alert(txt);
+        } finally {
+          document.getElementById('out1').innerHTML = "Finalizado..";
+        }
+      }
+
+      function testThrow() {
+        try {
+          var x = document.getElementById("userInput").value;
+          if (x == "") throw "vazio";
+          if (x > 10) throw "Muito alto";
+          if (x < 1) throw "Muito baixo"
+        } catch(e){
+          alert("Erro: " + e);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      <input type="button" name="btShow" value="Click" onclick="showMessage()">
+    </p>
+    <p id="out1">
+
+    </p>
+    <br>
+    <br>
+    <p>
+      Insira um valor entre 1 e 10.<br>
+      <input type="text" name="valor" value="" id="userInput">
+      <input type="button" name="btValor" value="Click" onclick="testThrow()">
+    </p>
+  </body>
+</html>

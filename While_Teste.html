@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>While Teste</title>
+    <script type="text/javascript">
+      function testWhile(frase,qtd) {
+        var frase = document.getElementById(frase).value;
+        var qtd = document.getElementById(qtd).value;
+        var i = 1;
+        while (i <= qtd) {
+            document.getElementById('view').innerHTML += i+": "+frase +"<br>";
+            i++;
+        }
+      }
+    </script>
+    <style type="text/css">
+      #frase {width: 500px;}
+      #qtd {width: 40px}
+    </style>
+  </head>
+  <body>
+    <p>
+      Escrever 
+      <input type="text" name="frase" value="" id="frase">
+      <input type="number" name="qtd" value="0" min="0" max="2000" step="1" id="qtd"> vezes. <br>
+      <input type="button" name="btMostrar" value="Mostar" onclick="testWhile('frase','qtd')">
+    </p>
+    <p id="view">
+
+    </p>
+  </body>
+</html>
