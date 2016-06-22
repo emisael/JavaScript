@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Objeto Date</title>
+    <script type="text/javascript">
+      function mostHora() {
+        var hora = new Date();
+        document.getElementById('view1').innerHTML = hora;
+        document.getElementById('view2').innerHTML = hora.toString();
+        document.getElementById('view3').innerHTML = hora.getFullYear();
+      }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+  </head>
+  <body>
+  <input type="button" name="btMostHora" value="Mostrar" onclick="mostHora()"><br><br>
+  <p>
+    Objeto Data <br>
+    Utilizado para se trabalhar com hora no javascript.
+  </p>
+  <p>
+    var hora = new Date();<br>
+    Atribue à variável hora a data e hora dos sistema (computador do usuário)<br>
+    hora: <span class="view" id="view1"></span>
+  </p>
+
+  <p>
+    hora.toString;<br>
+    Exibe a hora completa por extenso (data atual) <br>
+    Ex: <span class="view" id="view2"></span>
+  </p>
+
+  <p>
+    hora.getFullYear;<br>
+    Exibe apenas o ano do objeto Date (data atual)<br>
+    Ex: <span class="view" id="view3"></span>
+  </p>
+
+  </body>
+</html>

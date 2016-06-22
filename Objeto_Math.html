@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Objeto Math</title>
+    <script type="text/javascript">
+      function testMath() {
+        document.getElementById('view1').innerHTML = Math.round(4.89);
+        document.getElementById('view1b').innerHTML = Math.round(7.5012);
+        document.getElementById('view2').innerHTML = Math.random(1);
+        document.getElementById('view3').innerHTML = Math.max(145,854,269,314,567,942,458);
+        document.getElementById('view4').innerHTML = Math.min(145,854,269,314,567,942,458);
+        document.getElementById('view5').innerHTML = Math.ceil(4.89);
+        document.getElementById('view5b').innerHTML = Math.ceil(7.5012);
+        document.getElementById('view6').innerHTML = Math.floor(4.89);
+        document.getElementById('view6b').innerHTML = Math.floor(7.5012);
+        document.getElementById('view7').innerHTML = Math.pow(2,4);
+        document.getElementById('view7b').innerHTML = Math.pow(5,2);
+        document.getElementById('view8').innerHTML = Math.sqrt(16);
+        document.getElementById('view8b').innerHTML = Math.sqrt(36);
+      }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+  </head>
+  <body>
+    Objeto Match: Utilizado para realizar diversos cálculos em javascript.<br>
+    <input type="button" name="btMostar" value="Mostrar" onclick="testMath()">
+    <p>Math.round();<br>
+      Utilizada para arredondar valores para inteiros<br>
+      Ex: Math.round(4.89) =
+      <span class="view" id="view1"></span><br>
+      Ex: Math.round(7.5012) =
+      <span class="view" id="view1b"></span>
+    </p>
+
+    <p>Math.random();<br>
+      Retorna um número aleatório entre 0 e 1, independente do número passado como parâmetro<br>
+      Ex: Math.random(1) =
+      <span class="view" id="view2"></span><br>
+    </p>
+
+    <p>Math.max(145,854,269,314,567,942,458);<br>
+      Retorna o maior número dentre os passados como parâmetro<br>
+      Ex: Math.max(145,854,269,314,567,942,458) =
+      <span class="view" id="view3"></span><br>
+    </p>
+
+    <p>Math.min(145,854,269,314,567,942,458);<br>
+      Retorna o menor número dentre os passados como parâmetro<br>
+      Ex: Math.min(145,854,269,314,567,942,458) =
+      <span class="view" id="view4"></span><br>
+    </p>
+
+    <p>Math.ceil();<br>
+      Utilizada para arredondar valores para cima transformando-os em inteiros<br>
+      Ex: Math.ceil(4.89) =
+      <span class="view" id="view5"></span><br>
+      Ex: Math.ceil(7.5012) =
+      <span class="view" id="view5b"></span>
+    </p>
+
+    <p>Math.floor();<br>
+      Utilizada para arredondar valores para baixo transformando-os em inteiros<br>
+      Ex: Math.floor(4.89) =
+      <span class="view" id="view6"></span><br>
+      Ex: Math.floor(7.5012) =
+      <span class="view" id="view6b"></span>
+    </p>
+
+    <p>Math.pow(x,y);<br>
+      Usado para calcular potência de um número<br>
+      Ex: Math.pow(2,4) =
+      <span class="view" id="view7"></span><br>
+      Ex: Math.pow(5,2) =
+      <span class="view" id="view7b"></span>
+    </p>
+
+    <p>Math.sqrt(x);<br>
+      Usado para calcular a raiz quadrada de um número<br>
+      Ex: Math.sqrt(16) =
+      <span class="view" id="view8"></span><br>
+      Ex: Math.sqrt(36) =
+      <span class="view" id="view8b"></span>
+    </p>
+
+
+  </body>
+</html>
