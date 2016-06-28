@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Objeto RegExp</title>
+    <script type="text/javascript">
+        function TextRegExp() {
+          var nom = document.getElementById('nome').innerHTML;
+          var rgexp1 = /Ca/gi;
+          var rgexp1b = /va/gi;
+          document.getElementById('view1').innerHTML = nom.match(rgexp1);
+          document.getElementById('view1b').innerHTML = nom.match(rgexp1b);
+        }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+  </head>
+  <body>
+    <p>
+      Expressões regulares descrevem padrões de caracteres. São utilizadas para buscar padrões ou sequências que podem ser utilizados em substituições por exemplo.<br>
+      Uma expressão regular é definida da seguinte forma:<br>
+      /exp/g(x). Onde (x) determina o modo de busca <br><br>
+
+      *g: Retorna todos os padrões encontrados na string em questão. <br>
+
+
+
+    </p>
+    <h1 id="nome">Emisael Cavalcante da Silva</h1>
+    <input type="button" name="btMosta" value="Mostrar" onclick="TextRegExp()">
+    <p>
+      Para (x) =  i : Busca ignorando case sensitive, ou seja, considera tanto maiúsculas como minúsculas. <br>
+      /Ca/gi = <span class="view" id="view1"></span><br>
+      /va/gi = <span class="view" id="view1b"></span>
+    </p>
+  </body>
+</html>
