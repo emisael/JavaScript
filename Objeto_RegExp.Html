@@ -10,6 +10,12 @@
           var rgexp1b = /va/gi;
           document.getElementById('view1').innerHTML = nom.match(rgexp1);
           document.getElementById('view1b').innerHTML = nom.match(rgexp1b);
+
+          var nom2 = new RegExp('va','i');
+          document.getElementById('view2').innerHTML = nom2.test(nom);
+
+          var nom3 = new RegExp('va','i');
+          document.getElementById('view3').innerHTML = nom3.exec(nom);
         }
     </script>
     <style type="text/css">
@@ -18,22 +24,37 @@
     </style>
   </head>
   <body>
+    <h2>Expressões Regulares</h2><br>
     <p>
       Expressões regulares descrevem padrões de caracteres. São utilizadas para buscar padrões ou sequências que podem ser utilizados em substituições por exemplo.<br>
       Uma expressão regular é definida da seguinte forma:<br>
-      /exp/g(x). Onde (x) determina o modo de busca <br><br>
-
+      /exp/g(x). Onde (x) determina o modo de busca <br>
+      Para (x) =  i : Busca ignorando case sensitive, ou seja, considera tanto maiúsculas como minúsculas. <br><br>
       *g: Retorna todos os padrões encontrados na string em questão. <br>
 
-
-
     </p>
-    <h1 id="nome">Emisael Cavalcante da Silva</h1>
-    <input type="button" name="btMosta" value="Mostrar" onclick="TextRegExp()">
+      <input type="button" name="btMosta" value="Mostrar" onclick="TextRegExp()">
+    <h5 id="nome">var nom = Emisael Cavalcante da Silva;</h5>
+
     <p>
-      Para (x) =  i : Busca ignorando case sensitive, ou seja, considera tanto maiúsculas como minúsculas. <br>
-      /Ca/gi = <span class="view" id="view1"></span><br>
-      /va/gi = <span class="view" id="view1b"></span>
+      Verificando se uma expressão regular está dentro de uma string com o método match;
+      var rgexp1 = /Ca/gi;<br><br>
+      nom.match(rgexp1) = <span class="view" id="view1"></span><br><br>
+      var rgexp1b = /va/gi;<br><br>
+      nom.match(rgexp1b)= <span class="view" id="view1b"></span><br>
     </p>
-  </body>
+
+    <p>
+      Verificando (de uma outra forma) se uma expressão regular está dentro de uma string com o método test,<br>
+      que retorna true caso a expressão regular seja encotrata na string ou false caso não seja encotrada.<br>
+      var nom2 = new RegExp('xa','i');<br>
+      nom2.test('Emisael Cavalcante da Silva') = <span class="view" id="view2"></span><br>
+    </p>
+    <p>
+      Verificando (de uma outra forma) se uma expressão regular está dentro de uma string com o método exec<br>
+      que retorna a parte localizada caso ela seja encontrada <br>
+      var nom2 = new RegExp('va','i');<br>
+      nom2.exec('Emisael Cavalcante da Silva') = <span class="view" id="view3"></span><br>
+    </p>
+</body>
 </html>
