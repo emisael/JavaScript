@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Objeto Array</title>
+    <script type="text/javascript">
+      function testArray1() {
+        var i = document.getElementById('indice').value;
+        var nomes = new Array();
+        nomes[0] = "Mateus";
+        nomes[1] = "Marcos";
+        nomes[2] = "Lucas";
+        nomes[3] = "João";
+        nomes[4] = "Atos dos Apóstolos";
+        document.getElementById('view1').innerHTML = nomes[i];
+      }
+
+      function testArray2() {
+
+        var nomes = new Array();
+        nomes[0] = "Mateus";
+        nomes[1] = "Marcos";
+        nomes[2] = "Lucas";
+        nomes[3] = "João";
+        nomes[4] = "Atos dos Apóstolos";
+
+        for (var i = 0;i < nomes.length; i++){
+          document.getElementById('view2').innerHTML += nomes[i];
+          if(i < nomes.length - 1){document.getElementById('view2').innerHTML += ' - '};
+        }
+      }
+
+      function testArray3() {
+        var nomes = new Array("Samuel","Natan","Isaías","Jeremías","Ezequiel","Daniel","Oséias","Joel","Zacarias");
+        for (var i = 0;i < nomes.length; i++){
+          document.getElementById('view3').innerHTML += nomes[i];
+          if(i < nomes.length - 1){document.getElementById('view3').innerHTML += ' | '};
+        }
+
+      }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+  </head>
+  <body>
+    <h3>Objetos Array</h3>
+    <p>
+      São um tipo especial de variáveis utilizadas para armazenar diversos valores ao mesmo tempo. É possível amarenar matrizes de dados.<br>
+      Cada elemento de um array é chamado de indice, sendo eles numerados inciando a partir de 0.<br><br>
+      Declaração de um array. <br>
+      var nomes = new Array();<br><br>
+      Atribuindo valores a um índice do Array;<br>
+      nomes[0] = "Emisael";<br><br>
+    </p>
+    var nomes = new Array();<br>
+    nomes[0] = "Mateus";<br>
+    nomes[1] = "Marcos";<br>
+    nomes[2] = "Lucas";<br>
+    nomes[3] = "João";<br>
+    nomes[4] = "Atos dos Apóstolos";<br><br>
+    Visualizar índice: <input type="number" name="indice" value="0" min="0" max="4" step="1" id="indice"> : <span class="view" id="view1"></span><br>
+    <input type="button" name="btMostra1" value="Mostrar" onclick="testArray1()"><br><br>
+
+    <input type="button" name="btMostra2" value="Mostrar Todos" onclick="testArray2()"><br>
+    <span class="view" id="view2"></span><br>
+
+    <p>
+      É possível também declarar um Array() já definindo seus elementos:<br>
+      var nomes = new Array("Samuel","Natan","Isaías","Jeremías","Ezequiel","Daniel","Oséias","Joel","Zacarias");
+    </p>
+    <input type="button" name="btMostra3" value="Mostrar Todos" onclick="testArray3()"><br>
+    <span class="view" id="view3"></span>
+
+  </body>
+</html>
