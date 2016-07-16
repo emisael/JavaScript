@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - "Use Strict"</title>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view {font-family: verdana;font-size: 14pt}
+    </style>
+    <script type="text/javascript">
+      function testStrict1(usa) {
+        var num1 = 4,
+            num2 = 5,
+            num3 = 6,
+            num4 = 10;
+            soma = num1 + num2 + num3 + num4;
+            document.getElementById('view1').innerHTML = soma;
+      }
+
+      function testStrict2(usa) {
+        'use strict'
+        var num1 = 4,
+            num2 = 5,
+            num3 = 6,
+            num4 = 10;
+            soma = num1 + num2 + num3 + num4;
+            document.getElementById('view1').innerHTML = soma;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Use Strict</h3>
+    <p>
+      Recurso que determina que o JavaScript seja executado em modo mais rigoroso.<br> Usando este recurso será gerado um erro de (exception)
+      quando: <br>
+      Caso alguma parte do código seja escrito de forma errada;<br>
+      Seja usada uma variável que não foi declarada...
+    </p>
+    <p>
+      var num1 = 4,<br>
+          num2 = 5,<br>
+          num3 = 6,<br>
+          num4 = 10;<br>
+          soma = num1 + num2 + num3 + num4;<br>
+          document.getElementById('view1').innerHTML = soma;
+    </p>
+    <input type="button" name="btMostra1" value="Mostar N" onclick="testStrict1()"><br>
+
+    <p>
+      'use strict'<br>
+      var num1 = 4,<br>
+          num2 = 5,<br>
+          num3 = 6,<br>
+          num4 = 10;<br>
+          soma = num1 + num2 + num3 + num4;<br>
+          document.getElementById('view1').innerHTML = soma;
+    </p>
+
+
+    <input type="button" name="btMostra2" value="Mostar S" onclick="testStrict2()"><br><br>
+    <span id="view1"></span>
+
+  </body>
+</html>
