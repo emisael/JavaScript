@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScrip - Caixa de Dialogo Confirm</title>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view  {font-family: verdana;font-size: 14pt}
+      #trm {font-weight: bold}
+    </style>
+    <script type="text/javascript">
+      function testMotrar() {
+        var mostra = confirm("Exibir resultado?");
+        var i = 0;
+        document.getElementById("view1").innerHTML = '';
+        if (mostra == true){
+          while (i <= document.getElementById("qtd").value){
+            document.getElementById("view1").innerHTML += document.getElementById("termo").value +'<br>';
+            i++;
+          }
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <h3>JavaScrip - Caixa de Dialogo Confirm</h3>
+    <span id="trm">Confirm</span>: Caixa de diálogo interativa, que possibilita obter uma resposta do usuário, <br>
+     sendo que o mesmo escolherá entre as opções sim e não.<br><br>
+    <table border="0">
+    <tr><td>Termo</td><td>Qtd</td></tr>
+    <tr><td><input type="text" name="termo" value="" placeholder="Ditite uma palavra" maxlength="50" id="termo"></td>
+        <td><input type="number" name="qtd" value="1" min="0" max="1000" id="qtd">   </td></tr>
+    </table>
+    <input type="button" name="btMostrar" value="Mostar" onclick="testMotrar()"><br>
+    <p id="view1">
+
+    </p>
+  </body>
+</html>

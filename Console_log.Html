@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Console.log</title>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view  {font-family: verdana;font-size: 14pt}
+      #trm {font-weight: bold}
+    </style>
+    <script type="text/javascript">
+      function testNota() {
+          var n = document.getElementById('nota').value;
+          if (n >=7){
+            console.log('Nota maior ou igual a 7: Aprovado');
+          } else{
+            console.log('Nota menor que 7: Reprovado');
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h3>JavaScript -  Console.log</h3>
+    <p>
+      <span id="trm">cosole.log():</span> Comando usado para dá saída de dados (informação) pelo log do navegador.<br>
+      As informações contidas dentro dos parênteses de comando console.log('<span id="trm">xxxx</span>'), aparecerão somente no colose do navegador.
+    </p>
+    <input type="number" name="nota" value="0" min="0" max="10" step="1" id="nota"><br>
+    <input type="button" name="btMostrar" value="Mostrar" onclick="testNota()">
+  </body>
+</html>

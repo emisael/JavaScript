@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript - Caixa de diálogo Prompt</title>
+    <script type="text/javascript">
+      function testPrompt() {
+        var dado = prompt('Digite um valor');
+        if (dado == ''){
+          document.getElementById('view1').innerHTML = 'Não houve valor informado';
+          console.log('Sem dado');
+        } else {
+          document.getElementById('view1').innerHTML += dado + '<br>';
+        }
+      }
+    </script>
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view  {font-family: verdana;font-size: 14pt}
+      #trm {font-weight: bold}
+    </style>
+  </head>
+  <body>
+    <h3>JavaScript - Caixa de diálogo Prompt</h3>
+    <span id="trm">Prompt:</span> Caixa de diálogo que permite entrada de dados.<br><br>
+    Click <input type="button" name="btMostrar" value="Aqui" onclick="testPrompt()"> para inserir um valor.<br>
+    <p id="view1">
+
+    </p>
+  </body>
+</html>

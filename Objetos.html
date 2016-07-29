@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+      .view { font-weight: bold; color: blue}
+      body, .view  {font-family: verdana;font-size: 14pt}
+      #trm {font-weight: bold}
+    </style>
+    <title>JavaScript - Objeto</title>
+    <script type="text/javascript">
+      var pc = {
+        processador: "Core I3 3.30 GHz",
+        memoria: "4 GB",
+        sitema_operacional: "Windows 7",
+        arquitetura: "x86",
+        unidades: ["Disco Local C:","Disco Local D","Disco Local E:"],
+        getDetalhes: function(){
+          return this.processador +" "+this.memoria;
+        },
+        unidade: function () {
+          return this.unidades[0];
+        }
+      };
+      document.write(pc.getDetalhes()+ ' '+ pc.unidade());
+      // document.write("Pc <br>Processador: "+pc.processador+"<br>Memória: "+pc.memoria+
+                    //  "<br>Sitema Operacional: "+pc.sitema_operacional+"<br> Arquitetura: "+pc.arquitetura);
+    </script>
+  </head>
+  <body>
+    <h3>JavaScript - Objeto<h3>
+    <p>
+      <span id="trm">Objeto:</span> Ojetos do mundo real são qualquer tipo de coisa como: carro, moto, celular, caneta, computador, etc, objetos apresentam
+      uma característica e realizam uma função.<br>
+      Na linguagem de programação, objetos tem o mesmo significado, mas utilizamos uma combinação de códigos para criar suas características (propriedades)
+      e sua funções (métodos).
+    </p>
+
+  </body>
+</html>
