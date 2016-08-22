@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>addEventListerner</title>
+    <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    div {
+      width:800px;
+      height:600px;
+      border: 2px solid darkgray;
+      float: left;
+      padding: 30px;
+      text-align:center;
+      background-color: lightblue;
+      font-size: 24px;
+    }
+    #resultado {
+      font-family: consola;
+      font-size: 18px;
+      font-weight: bold;
+      width: 80px;
+      background-color: black;
+      color: white;
+      padding: 5px;
+    }
+    #obj {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      position: relative;
+    }
+    </style>
+  </head>
+  <body>
+      <p> <samp id="resultado"></samp></p>
+    <div id="area">
+      <span id="obj"> X </span>
+    </div>
+
+    <input type="button" name="btPosicao" value="posicao" onclick="posicao()">
+
+    <script type="text/javascript">
+      var area = document.getElementById("area");
+      if (area.attachEvent){
+        area.attachEvent("mousemove", moveMouse);
+      } else if (area.addEventListener){
+        area.addEventListener("mousemove", moveMouse,true);
+      }
+
+      function moveMouse(evento){
+        var x = evento.x - 8,
+            y = evento.y - 53;
+            document.getElementById("resultado").innerHTML = "x: " + x + " y: " + y;
+      }
+
+      var obj = document.getElementById("obj");
+
+      function posicao() {
+
+          obj.clienteTop = 50px;
+          obj.clienteTop = 80px;
+          // obj.getBoundingClientRect(x,y);
+
+      }
+
+    </script>
+  </body>
+</html>
